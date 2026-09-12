@@ -1,0 +1,110 @@
+/*imagen de fondo y centrar el div*/
+body {background-image: URL("../img/fondo.png");
+	  margin: 0;
+      background-color: #ececec;
+      display: flex;
+      justify-content: center;}
+
+/*atributo id del elemento div que contiene todo lo que esta en el body*/
+#contenedor{max-width: 75rem;
+    		width: 100%;
+    		background-color: white;
+    		padding: 2rem;}
+
+/*uso de google fonts*/
+h1, h2, h3, h4, nav {font-family: "Ubuntu", sans-serif;
+  					font-weight: 500;
+  					font-style: normal}
+
+header, footer {background-color: rgb(57, 68, 123);
+				color: 	white;
+				padding: 1rem;
+				margin: 0;}
+
+/*estilos del menu*/
+nav {text-align: center;
+	background-color: rgb(75, 230, 255);}
+
+nav ul {list-style-type: none;
+		display: flex;
+		justify-content: center;
+		padding: 1rem;
+		margin: 0;}
+
+nav li {display: inline-block;}
+
+nav a {text-decoration: none;
+		padding: 1rem;}
+
+nav a:link {background-color: rgb(75, 230, 255);
+			color: rgb(0, 0, 64);}
+nav a:visited {background-color: rgb(75, 230, 255);
+				color: rgb(0, 0, 64);}
+nav a:hover {background-color: rgb(195, 230, 255);
+			color: gray;}
+nav a:active {background-color:	white;
+				color: black;}
+
+/*columna general para demas paginas de una sola columna*/
+.columna {background-color: #ccdfff;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;}
+
+.columna article {background-color: white;
+					width: 22%;
+  					margin: 1%;
+    				padding: 1rem;
+    				box-sizing: border-box;}
+
+.columna h2 {width: 100%;
+			margin-left: 1%;}
+
+/*Estilo para la 1ra pagina y sus 3 columnas*/
+#tresColumnas {background-color: #ccdfff;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: stretch;}
+
+#tresColumnas article {background-color: white;
+    					width: 30%;
+    					margin: 1%;
+    					padding: 1rem;
+    					box-sizing: border-box;}
+
+#tresColumnas h2 {width: 100%;
+				margin-left: 1%;}
+
+/*Estilo para la 2da pagina y sus 2 columnas*/
+#dosColumnas {background-color: #ccdfff;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: stretch;}
+
+#dosColumnas h2 {width: 100%;
+				margin-left: 1%;}
+
+.grande {background-color: white;
+    		margin: 1rem;
+    		padding: 1rem;
+		    width: 60%;
+    		box-sizing: border-box;}
+
+.chico {background-color: white;
+    	margin: 1rem;
+    	padding: 1rem;
+    	width: 30%;
+    	box-sizing: border-box;}
+
+/*imagenes para que se acomoden a las columnas, para esto utilice chat gpt, xq no sabia como hacerlo*/
+
+img {width: 100%;
+	height: auto;}
+
+footer {background-color: #8493d3;
+		color: white;}
