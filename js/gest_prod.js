@@ -63,7 +63,7 @@ btnAgregar.addEventListener("click", function(){
     inputNombre.value = "";
     inputPersonas.value = "";
     inputDias.value = "";
-// Esto de arriba es para que despues de apretar agregar obra y se haya guardado los datos, se borre lo que escribio el usuario para que vuelva a escribir
+// Esto de arriba es para que despues de apretar agregar obra y se haya guardado los datos, se borre lo que escribio el usuario para que se pueda volver a escribir
 
     if (instaUsuario.length == cantidadInstalaciones){
         btnAgregar.disabled = true;
@@ -82,17 +82,17 @@ btnCalcular.addEventListener("click", function(){
         return; //alerta por si pone un valor equivocado
     }
 
-    // Resultado Promedio
+    // primer resultado
     let totalPersonas = 0;
 
     for (let i = 0; i<instaUsuario.length; i++){
         totalPersonas += instaUsuario[i].personas;
-    } //estructura repetitiva para poner el valor total de las duraciones de las obras en la variable duracionTotal
+    } //estructura repetitiva para poner el valor total de las personas en la variable
 
     let costoDia = totalPersonas * trabajo * honorario;
 
 
-    // Resultado de Mayor Obra
+    // segundo resultado
     let mayorDias = 0;
     let nombreMayor = "";
     let personasMayor = 0;
@@ -101,21 +101,21 @@ btnCalcular.addEventListener("click", function(){
         if (instaUsuario[i].dias > mayorDias){
             mayorDias = instaUsuario[i].dias;
             nombreMayor = instaUsuario[i].nombre;
-            personasMayor = instaUsuario[i].personas; // estructura repetitiva para descubrir cual es la obra con mayor peso
+            personasMayor = instaUsuario[i].personas; // estructura repetitiva para descubrir cual es la obra con mas dias y mas costo
         }
     }
 
     let costoMayor = personasMayor * mayorDias * trabajo * honorario;
 
 
-    // Resultado de Presupuesto
+    // tercer resultado
     let costoTotal = 0;
 
     for (let i = 0; i<instaUsuario.length; i++){
         costoTotal += instaUsuario[i].personas * instaUsuario[i].dias * trabajo * honorario; 
     }
 
-    let porcentaje = Math.round((costoMayor / costoTotal) * 100);//estructura repetitiva para guardar el valor total del presupuesto en un año
+    let porcentaje = Math.round((costoMayor / costoTotal) * 100);//estructura repetitiva para el valor del porcentage de la instalacion mayor sobre el costo total
 
 
     /* Mostrar los resultados */
