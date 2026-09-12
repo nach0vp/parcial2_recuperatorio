@@ -108,3 +108,18 @@ img {width: 100%;
 
 footer {background-color: #8493d3;
 		color: white;}
+
+/*estilos para los datos curiosos del index*/
+
+#datosCuriosos {background-color: rgb(57, 68, 123);
+				color: white;
+				font-size: 2rem;}
+
+/*Cambio de tamaño de las obras en la galeria de la pagina de obras*/
+#galeria {display: flex;
+			flex-wrap: wrap;}
+
+.obra {width: 17rem;
+		margin: 2rem;}
+
+.obra img {width: 100%;}
